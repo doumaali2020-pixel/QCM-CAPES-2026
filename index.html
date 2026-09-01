@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QCM CAPES 2026</title>
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']]},
+  svg: {fontCache: 'global'}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="header-inner">
+    <div class="title-wrap">
+      <h1>QCM CAPES 2026</h1>
+      <div class="subtitle">Mathématiques — document complet — Q1 à Q60 — une question par page</div>
+    </div>
+    <div class="progress-wrap">
+      <div id="progressText" class="progress-text"></div>
+      <div class="progress"><div id="progressBar"></div></div>
+    </div>
+  </div>
+</header>
+
+
+      <section id="identityBox" class="identity-box">
+        <h2>Identification du professeur</h2>
+        <div class="identity-grid">
+          <label>
+            Nom du professeur
+            <input id="teacherName" type="text" placeholder="Votre nom et prénom" autocomplete="name">
+          </label>
+          <label>
+            Votre Gmail
+            <input id="teacherEmail" type="email" placeholder="exemple@gmail.com" autocomplete="email">
+          </label>
+        </div>
+        <p class="identity-note required-note">Nom et Gmail du professeur obligatoires pour commencer le QCM.</p>
+        <button id="startQuizBtn" class="start-quiz-btn" type="button">Commencer le QCM</button>
+      </section>
+
+<main>
+<section id="quizPage" class="page">
+  <div id="qNum" class="qnum"></div>
+  <div id="qText" class="question"></div>
+  <div id="choices" class="choices"></div>
+  <div id="feedback" class="feedback"></div>
+  <div id="correction" class="correction"></div>
+  <div class="actions">
+    <button id="prevBtn">Question précédente</button>
+    <div id="score" class="score"></div>
+    <button id="nextBtn" disabled>Question suivante</button>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+
+  <div id="finishOverlay" class="finish-overlay" hidden><div class="finish-card"><h2>Envoi du résultat…</h2><p>Veuillez patienter.</p></div></div>
+
+
+  <button id="finishBtn" class="finish-btn" type="button">Je termine</button>
+
+</body>
+</html>
