@@ -30,3 +30,37 @@ main{min-height:calc(100vh - 110px);display:grid;place-items:center;padding:30px
 #finishOverlay{
   display:none !important;
 }
+
+
+/* ===== Correction écran initial : Choisir le QCM ===== */
+body.before-start #selectionBox{
+  width:min(900px, calc(100% - 36px));
+  margin:42px auto;
+  padding:30px;
+}
+body.before-start #selectionBox h2{
+  text-align:center;
+  margin:0 0 26px;
+}
+body.before-start #selectionBox .exam-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:22px;
+}
+body.before-start #selectionBox .exam-card{
+  width:100%;
+  min-height:135px;
+  justify-content:center;
+  text-align:center;
+}
+@media(max-width:720px){
+  body.before-start #selectionBox{
+    width:min(94%, 560px);
+    margin:24px auto;
+    padding:20px 16px;
+  }
+  body.before-start #selectionBox .exam-grid{
+    grid-template-columns:1fr;
+  }
+}
